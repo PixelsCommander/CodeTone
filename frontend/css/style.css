@@ -1,0 +1,92 @@
+body {
+    background-color: green;
+    color: #ffffff;
+    font-family: alright_sansblack, HelveticaNeue, Helvetica, Arial, sans-serif;;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 10% auto 0 auto;
+    vertical-align: top;
+    position: relative;
+}
+
+.wrapper h1 {
+    font-size: 120px;
+    line-height: 120px;
+    margin-bottom: 14px;
+}
+
+.wrapper p {
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.left_part {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+.right_part {
+    overflow-y: visible;
+    overflow-x: hidden;
+    height: 500px;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+input {
+    border: 1px solid #737373;
+    vertical-align: top;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 25px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+}
+
+button.play_site {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 4px;
+    border: 0px;
+    background-color: transparent;
+    background: url("../img/play-button.png") no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.scrolling_pane {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.code_line {
+    color: #55b72b;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 0% 0%;
+    position: absolute;
+    bottom: 0px;
+    white-space: nowrap;
+}
+
+.active {
+    color: green;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.yellow {
+    background-color: #ffce00;
+}
+
+.red {
+    background-color: #ff0006;
+}
