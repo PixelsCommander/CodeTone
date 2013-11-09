@@ -1,5 +1,5 @@
 body {
-    background-color: green;
+    background-color: forestgreen;
     color: #ffffff;
     font-family: alright_sansblack, HelveticaNeue, Helvetica, Arial, sans-serif;;
 }
@@ -54,17 +54,24 @@ input {
     display: inline-block;
 }
 
-button.play_site {
+button {
     vertical-align: top;
     display: inline-block;
     padding: 0;
     margin: 0 0 0 4px;
     border: 0px;
     background-color: transparent;
-    background: url("../img/play-button.png") no-repeat;
-    background-size: 100% 100%;
+    background: url("../img/buttons.png") no-repeat;
     width: 30px;
     height: 30px;
+}
+
+button.play_site {
+    background-position: -30px;
+}
+
+button.pause_site {
+    background-position: 0px;
 }
 
 .scrolling_pane {
