@@ -35,6 +35,7 @@ window.pauseCodeTone = function (url) {
 }
 
 if (document.location.hash.length > 0) {
-    $(window.inputToPlay).val(document.location.hash)
-    window.playCodeTone(document.location.hash);
+    var urlToPlay = document.location.hash.replace('#','');
+    $(window.inputToPlay).val(urlToPlay);
+    window.playCodeTone(urlToPlay);
 }
