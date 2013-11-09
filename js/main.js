@@ -5,11 +5,11 @@ window.playURLFromInput = function (e) {
     if (htmltone.player.playing === true) {
         window.pauseCodeTone();
     } else {
-        if (htmltone.URL === window.inputToPlay.value) {
-            window.resumeCodeTone();
-            htmltone.player.play();
-        } else {
-            if ((e === undefined || e.keyCode === 13 || e.keyCode === undefined) && window.inputToPlay.value.length > 0) {
+        if ((e === undefined || e.keyCode === 13 || e.keyCode === undefined) && window.inputToPlay.value.length > 0) {
+            if (htmltone.URL === window.inputToPlay.value) {
+                window.resumeCodeTone();
+                htmltone.player.play();
+            } else {
                 window.playCodeTone(window.inputToPlay.value);
             }
         }
@@ -19,12 +19,8 @@ window.playURLFromInput = function (e) {
 $(inputToPlay).on('keydown', window.playURLFromInput);
 window.htmltone = new HTMLTone('.scrolling_pane');
 
-if (window.queryString.url !== undefined) {
-    $(window.inputToPlay).val(window.queryString.url)
-    window.playCodeTone(window.queryString.url);
-}
-
 window.playCodeTone = function (url) {
+    document.location.hash = url;
     htmltone.load(url);
     window.resumeCodeTone();
 }
@@ -36,4 +32,9 @@ window.resumeCodeTone = function (url) {
 window.pauseCodeTone = function (url) {
     window.playButton.className = 'play_site';
     htmltone.player.stop();
+}
+
+if (document.location.hash.length > 0) {
+    $(window.inputToPlay).val(document.location.hash)
+    window.playCodeTone(document.location.hash);
 }
