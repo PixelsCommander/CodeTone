@@ -65,7 +65,7 @@
 
         if (this.currentLine === this.data.values.length) {
             this.currentLine = 0;
-            this.stop();
+            window.pauseCodeTone();
         }
     }
 
