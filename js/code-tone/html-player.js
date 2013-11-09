@@ -26,13 +26,11 @@
         } else {
             alert('Web audio API is not supported');
         }
-
-        this.oscillator = this.audioContext.createOscillator();
-        this.oscillator.type = this.oscillator.SQUARE;
-        this.oscillator.connect(this.audioContext.destination);
     }
 
     p.refreshData = function (dataObject) {
+        this.linesNodes = [];
+        this.container.innerHTML = '';
         this.data = dataObject;
         this.currentLine = 0;
         for (var i = 0; i < dataObject.lines.length; i++) {
@@ -49,6 +47,7 @@
     }
 
     p.play = function () {
+        this.oscOn();
         this.oscillator.start(0);
         this.interval = setInterval(this.playCurrentLineAndGoFurther.bind(this), this.speed);
         this.playing = true;
@@ -65,6 +64,7 @@
         this.currentLine++;
 
         if (this.currentLine === this.data.values.length) {
+            this.currentLine = 0;
             this.stop();
         }
     }
@@ -92,8 +92,19 @@
 
     p.stop = function() {
         clearInterval(this.interval);
-        this.oscillator.stop(0, 0);
+        this.oscOff();
         this.playing = stop;
+    }
+
+
+    p.oscOn = function() {
+        this.oscillator = this.audioContext.createOscillator();
+        this.oscillator.type = this.oscillator.SQUARE;
+        this.oscillator.connect(this.audioContext.destination);
+    }
+
+    p.oscOff = function() {
+        this.oscillator.stop(0, 0);
     }
 
     w.HTMLTonePlayer = HTMLTonePlayer;

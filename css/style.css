@@ -37,6 +37,10 @@ body {
     vertical-align: top;
 }
 
+.addthis_toolbox {
+    margin: 23px;
+}
+
 input {
     border: 1px solid #737373;
     vertical-align: top;

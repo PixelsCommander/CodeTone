@@ -20,19 +20,30 @@
     <body>
         <div class="wrapper">
             <div class="left_part">
-                <h1>HTML<br>TONE</h1>
+                <h1>CODE<br>TONE</h1>
                 <p>Let code play!</p>
-                <input id="inputToPlay" type="text" placeholder="Enter URL of page to play" value="techcrunch.com">
+                <input id="inputToPlay" type="text" placeholder="Enter URL of page to play" value="pixelscommander.com">
                 <button class="play_site" onclick="playURLFromInput()"></button>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style">
+                    <a class="addthis_button_tweet"></a>
+                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                    <a class="addthis_counter addthis_pill_style"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ea2f9164143bcfb"></script>
+                <!-- AddThis Button END -->
             </div>
             <div class="right_part">
                 <div class="scrolling_pane"></div>
             </div>
         </div>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/html-tone/data-loader.js"></script>
-        <script src="js/html-tone/html-player.js"></script>
-        <script src="js/html-tone/html-tone.js"></script>
+        <script src="js/code-tone/query-string.js"></script>
+        <script src="js/code-tone/data-loader.js"></script>
+        <script src="js/code-tone/html-player.js"></script>
+        <script src="js/code-tone/html-tone.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

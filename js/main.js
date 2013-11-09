@@ -16,3 +16,8 @@ window.playURLFromInput = function (e) {
 
 $(inputToPlay).on('keydown', window.playURLFromInput);
 window.htmltone = new HTMLTone('.scrolling_pane');
+
+if (window.queryString.url !== undefined) {
+    $(window.inputToPlay).val(window.queryString.url)
+    htmltone.load(window.queryString.url);
+}
