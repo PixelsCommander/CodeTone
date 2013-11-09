@@ -5,7 +5,7 @@
 
     var p = HTMLToneDataLoader.prototype;
 
-    p.APIURL = '../backend/graber.php';
+    p.APIURL = './backend/graber.php';
 
     p.loadURLContent = function(URL) {
         $.get(p.APIURL + '?grabURL=' + URL, this.onContentLoaded.bind(this));

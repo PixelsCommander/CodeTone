@@ -5,6 +5,7 @@ body {
 }
 
 .wrapper {
+    min-width: 880px;
     max-width: 1024px;
     margin: 10% auto 0 auto;
     vertical-align: top;
@@ -15,6 +16,7 @@ body {
     font-size: 120px;
     line-height: 120px;
     margin-bottom: 14px;
+    display: block;
 }
 
 .wrapper p {
@@ -23,6 +25,7 @@ body {
 }
 
 .left_part {
+    margin-left: 20px;
     display: inline-block;
     vertical-align: top;
     width: 40%;
